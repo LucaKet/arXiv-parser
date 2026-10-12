@@ -30,7 +30,7 @@ in the new order, in this case it would be:
 3. 'example B'
 
 The location of the generated file 'date.md' can be set in the 'dir' tag of `config.toml`:
-dir = "path_to_output_directory".
+dir = "path_to_output_directory" (by default set to digests/).
 The data sent to the LLM are obtained via an API call to arXiv's server.
 The categories from which the entries are obtained are also set in `config.toml`, in the 
 [arxiv] section.
@@ -42,26 +42,24 @@ corresponding values in the [llm] section of `config.toml`.
 ## Technical details
 
 - **Date:** you specify the digest date you care about (`--date
-  YYYY-MM-DD`); with no argument, today is assumed. Batch mode matches the
-  digest email you received on the morning of `D` (the batch dated D-1 or
-  D). For dates the listing page no longer covers, the script falls back to
-  the API submission-date window (approximate) and says so.
+  YYYY-MM-DD`); with no argument, today is assumed. 
 - **Window (fallback):** in `mode = "api"`, or when the listing batch is
   unavailable for the requested date, the script queries
   `submittedDate:[D-2 .. D]` (UTC) — configurable via
   `arxiv.window_days_back`. This mode cannot see replacements or older
   cross-lists (the API has no announcement-date search field).
 - **Ranking:** the LLM receives your `interests.md` and returns only a JSON
-  array of indices (a permutation) — never rewritten content. Digests up to
-  `ranker.two_pass_threshold` papers are ranked in one call with full
+  array of indices (a permutation). Digests up to a certain ammount of entries, set in 
+  `ranker.two_pass_threshold`, are ranked in one call with full
   abstracts; larger digests use two passes: a cheap ranking of everything by
   title/authors/categories, then a full-abstract refinement of the top
-  `ranker.refine_top` papers. Invalid permutations trigger one retry, then
-  fall back to the original order. Speed over precision by design.
-- **Output:** `digests/yyyy-mm-dd.md`, one file per queried date, each entry
+  N=`ranker.refine_top` papers. 
+  This is because entries lists that are too big can saturate the context window
+  of free models quickly.
+    - Invalid outputs: if the AI returns anything but the permutation array it gets 
+    ignored and the output shows the same order of entries as is on arXiv.
+- **Output:** `digests/yyyy-mm-dd.md`, each entry
   keeping title, authors, arXiv id/link, categories, and the full abstract.
-  Titles and abstracts are hard-wrapped at 80 columns and entries are
-  separated by horizontal rules.
 
 ## Requirements
 
@@ -71,13 +69,12 @@ corresponding values in the [llm] section of `config.toml`.
 ## Setup
 
 1. Copy `config.example.toml` to `config.toml` and edit it:
-   - `arxiv.categories`: the categories you subscribe to (your arXiv account
-     page lists them; the [category taxonomy](https://arxiv.org/category_taxonomy)
-     has the identifiers, e.g. `cond-mat.mes-hall`).
+   - `arxiv.categories`: the categories you want to receive entries from
+        e.g. cond-mat.mes-hall
    - `output.dir`: where the daily files go.
-2. Copy `interests.example.md` to `interests.md` and edit it with the topics, keywords, and methods you care
-   about. It is read fresh on every run — no other step needed after edits.
-3. (Optional) Enable LLM ranking:
+2. Copy `interests.example.md` to `interests.md` and edit it with the topics, keywords, 
+        and methods you care about. 
+3. Enable LLM ranking:
    - Set `llm.provider = "openai-compatible"` — this works with OpenAI,
      Gemini (via Google's OpenAI-compatible endpoint), Groq, DeepSeek,
      Ollama, LM Studio, and most other providers.
@@ -116,41 +113,19 @@ python3 -m arxiv_parser --no-rank
 python3 -m arxiv_parser --dry-run
 ```
 
-Example output:
 
-```
-  exact announcement batch [cond-mat.mes-hall, cond-mat.str-el,
-    cond-mat.supr-con, cond-mat.stat-mech, cond-mat.dis-nn]
-    (Showing new listings for Friday, 2 October 2026), 151 papers
-  ranking with openai-compatible (gemini-3.8-flash) -> ...
-    first pass: ranking all 151 papers by title/authors ...
-    second pass: refining top 30 with full abstracts ...
-    done in 15.1s
-Wrote digests/2026-10-03.md (151 papers)
-```
+## Notes 
 
-The resulting file lists papers from most to least interesting, each with
-full metadata and abstract. Re-running the same date overwrites that day's
-file — useful when you refine `interests.md` and want a better ordering.
-
-## Notes and limits
-
-- **Batch mode** (`arxiv.mode = "auto"`, default) reproduces your digest
-  email exactly: new submissions, cross-lists, and replacements, in email
+- **Batch mode** (`arxiv.mode = "auto"`, default) reproduces arXiv's
+  emails exactly: new submissions, cross-lists, and replacements, in email
   order. It uses the listing page as the index and enriches through the
-  API; if the listing page is unreachable it falls back to the window mode
-  and says so.
+  API; if the listing page is unreachable it falls back to the window mode.
 - **Fallback window mode** (`arxiv.mode = "api"`) can only search by
   *submission* date, so replacement submissions and cross-lists of papers
-  submitted before the window are not included — the API simply does not
-  expose announcement-batch membership.
+  submitted before the window are not included.
 - The listing page only covers the current batch, so exact reproduction is
   available for recent dates; older `--date` values fall back to the
   window mode automatically.
-- Weekend runs are handled: batch mode simply reports the latest batch, and
-  the fallback window catches the most recent weekday submissions.
-- arXiv asks API users to be gentle: this client paginates with delays and
-  uses a descriptive User-Agent.
 
 ## Development
 
