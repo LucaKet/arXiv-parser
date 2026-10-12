@@ -1,8 +1,7 @@
 [arxiv]
 # Categories you subscribe to on arXiv (one listing page each).
 # https://arxiv.org/category_taxonomy
-categories = ["cs.LG", 
-              "cs.CL"]
+categories = ["...", "..."]
 
 # "auto" : try the exact announcement batch via the listing page (matches
 #          your digest email: new + cross + replacement submissions),
@@ -26,10 +25,10 @@ interests_file = "interests.md"
 
 [llm]
 provider = "openai-compatible"
-model = "gemini-3.8-flash"
-fallback_models = ["gemini-3.7-flash", "gemini-3.5-flash-lite"]
-base_url = "https://generativelanguage.googleapis.com/v1beta/openai"
-api_key_env = "GEMINI_API_KEY"
+model = "..."
+fallback_models = ["...", "..."]
+base_url = "..."
+api_key_env = "..."
 timeout = 300
 
 [ranker]
