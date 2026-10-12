@@ -1,0 +1,42 @@
+[arxiv]
+# Categories you subscribe to on arXiv (one listing page each).
+# https://arxiv.org/category_taxonomy
+categories = ["cs.LG", 
+              "cs.CL"]
+
+# "auto" : try the exact announcement batch via the listing page (matches
+#          your digest email: new + cross + replacement submissions),
+#          falling back to the submission-date window if unavailable
+# "api"  : always use the submission-date window (approximate: misses
+#          replacements and older cross-lists)
+mode = "auto"
+
+# How many days before the query date to include in the submittedDate
+# window. 2 is a good default: the most recent announcement batch contains
+# papers submitted on the previous days. Note that replacement versions and
+# cross-lists of papers submitted earlier than the window are not
+# discoverable through the arXiv API search fields.
+window_days_back = 2
+
+[output]
+# Directory where the daily yyyy-mm-dd.md files are written.
+dir = "digests"
+# User-editable file that tells the LLM what you care about.
+interests_file = "interests.md"
+
+[llm]
+provider = "openai-compatible"
+model = "gemini-3.8-flash"
+fallback_models = ["gemini-3.7-flash", "gemini-3.5-flash-lite"]
+base_url = "https://generativelanguage.googleapis.com/v1beta/openai"
+api_key_env = "GEMINI_API_KEY"
+timeout = 300
+
+[ranker]
+temperature = 0.2
+max_retries = 1
+# Digests larger than this get a cheap title/authors-only first pass, then a
+# full-abstract refinement of the top `refine_top` papers. Smaller digests
+# are ranked in a single pass with full abstracts.
+two_pass_threshold = 60
+refine_top = 50

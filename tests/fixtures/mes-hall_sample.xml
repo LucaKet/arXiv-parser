@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/s0SOCW+vAuJlc8qWkG6uqAnABJ4</id>
+  <title>arXiv Query: search_query=(cat:cond-mat.mes-hall) AND submittedDate:"202610010000 TO 202610032359"&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-03T12:24:43Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:cond-mat.mes-hall+AND+submittedDate:%22202610010000+TO+202610032359%22&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>21</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00877v1</id>
+    <title>Complex Magnetic Phases and Unconventional Skyrmion Thermodynamics in Magnetically Intercalated Cr$_{1+x}$Te$_2$Compounds</title>
+    <updated>2026-10-01T00:51:13Z</updated>
+    <link href="https://arxiv.org/abs/2610.00877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.00877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chemical intercalation provides a powerful route for tuning the electronic and magnetic properties of transition metal dichalcogenides (TMDs), enabling the emergence of magnetic phases and phenomena that are otherwise inaccessible in their pristine forms. Here, we investigate the structural, electronic, and magnetic properties of magnetically intercalated Cr$_{1+x}$Te$_2$ through a combination of scanning tunneling microscopy, angle-resolved photoemission spectroscopy, magnetization, electrical transport, and Lorentz transmission electron microscopy measurements. We uncover a rich magnetic phase diagram comprising paramagnetic, in-plane spin-fluctuation, out-of-plane ferromagnetic, and field-induced Néel-type skyrmion phases. In particular, Lorentz transmission electron microscopy directly reveals the formation of Néel-type skyrmion textures slightly below the Curie temperature, with their configurations evolving strongly with temperature and magnetic field. The skyrmions exhibit pronounced thermal hysteresis and coexist with stripe domains, indicative of a complex magnetic energy landscape arising from the competition among disorder-induced local Dzyaloshinskii-Moriya interactions, perpendicular magnetic anisotropy, and dipolar interactions. Our results demonstrate that chemical intercalation can profoundly reshape the magnetic interactions and phase behavior of TMDs, establishing Cr$_{1+x}$Te$_2$ as a versatile platform for exploring tunable magnetism, skyrmion physics, and unconventional thermodynamic phenomena in low-dimensional quantum materials.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T00:51:13Z</published>
+    <arxiv:comment>4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Clayton Conner</name>
+    </author>
+    <author>
+      <name>Santosh Karki Chhetri</name>
+    </author>
+    <author>
+      <name>Avinash Sah</name>
+    </author>
+    <author>
+      <name>Manoj Gadtoula</name>
+    </author>
+    <author>
+      <name>Dilan M. Gamachchi</name>
+    </author>
+    <author>
+      <name>Indeewari M. Karunarathne</name>
+    </author>
+    <author>
+      <name>Steven Kelley</name>
+    </author>
+    <author>
+      <name>Andrew C. Meng</name>
+    </author>
+    <author>
+      <name>Jacob Cook</name>
+    </author>
+    <author>
+      <name>Cheng Zhang</name>
+    </author>
+    <author>
+      <name>Jin Hu</name>
+    </author>
+    <author>
+      <name>Yue Li</name>
+    </author>
+    <author>
+      <name>Hoyeon Jeon</name>
+    </author>
+    <author>
+      <name>An-Ping Li</name>
+    </author>
+    <author>
+      <name>Zheng Gai</name>
+    </author>
+    <author>
+      <name>Guang Bian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00918v1</id>
+    <title>Telecom-Band Optical Transitions of Erbium Atoms in Rare-Gas Solids</title>
+    <updated>2026-10-01T01:53:05Z</updated>
+    <link href="https://arxiv.org/abs/2610.00918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.00918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rare-earth (RE) atoms, such as erbium (Er), have inner-shell optical transitions in the near-infrared, some of which are in the telecom bands. These transitions are largely insensitive to the host environment due to effective shielding by the filled outer shells. Cryogenic rare-gas (RG) solids, such as solid neon (Ne) and argon (Ar), combine high chemical purity with a nearly nuclear-spin-free environment, making them attractive solid hosts for preserving optical and spin coherence. In this work, we isolate neutral Er atoms in solid Ne and Ar at 6 K and characterize their emission by steady-state and time-resolved photoluminescence (PL) spectroscopy. In both hosts, we observe several near-infrared transitions between 1000--1500 nm, including inner-shell emission in the telecom O and E bands. The $4f \rightarrow 5d$ transition near 1299 nm forms a multiplet of narrow components, consistent with crystal-field splitting, and decays on a microsecond timescale. The $4f \rightarrow 4f$ transition near 1437 nm shows a matrix shift below 1 cm$^{-1}$ in both hosts. In solid Ne, its inhomogeneous linewidth is bounded by the spectrometer resolution to &lt; 22 GHz, and its PL lifetime reaches up to 78.9 ms, close to the estimated radiative limit. Thermal annealing extends the 1437 nm lifetime in Ne and suppresses the phonon sidebands relative to the zero-phonon lines in Ar. These results identify RG solids as promising hosts for long-lived telecom-band Er emission and provide a foundation for future spin-photon interfaces and hybrid quantum architectures.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T01:53:05Z</published>
+    <arxiv:comment>12 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Evgenii Zaitsev</name>
+    </author>
+    <author>
+      <name>Alec Dinerstein</name>
+    </author>
+    <author>
+      <name>Shan Zou</name>
+    </author>
+    <author>
+      <name>Charles Peretti</name>
+    </author>
+    <author>
+      <name>Yutian Wen</name>
+    </author>
+    <author>
+      <name>Wei Guo</name>
+    </author>
+    <author>
+      <name>Gregory V. Hartland</name>
+    </author>
+    <author>
+      <name>Yizhong Huang</name>
+    </author>
+    <author>
+      <name>Dafei Jin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00956v1</id>
+    <title>Hydrogen plasma-assisted atomic layer epitaxy of superconducting titanium nitride</title>
+    <updated>2026-10-01T02:38:50Z</updated>
+    <link href="https://arxiv.org/abs/2610.00956v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.00956v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Atomic layer deposition (ALD) offers precise, conformal control of thin-film growth and is a workhorse for semiconductor manufacturing, but its use in superconducting quantum circuits is constrained by the need to simultaneously control crystallinity, stoichiometry and interfacial disorder at cryogenic temperatures. Here we develop hydrogen plasma assisted ALD to epitaxially grow superconducting titanium nitride (TiN) thin films, using a hydrogen plasma step to modify the surface chemistry to suppress precursor-derived impurities during each deposition cycle. Synchrotron X-ray scattering reveals semi-coherent epitaxy of TiN on c-plane sapphire, with discrete crystallographic domains and minimal long-range structural disorder. Complementary X-ray spectroscopy and neutron reflectometry show negligible oxygen-related disorder throughout the film and no substantial hydrogen incorporation. The resulting TiN films exhibit a superconducting transition at 2.2 K, a kinetic inductance of 15 pH/sq and a superconducting coherence length of 14.6 nm, comparable to the measured crystal coherence length. These results establish hydrogen plasma assisted ALD as a route to structurally ordered superconducting TiN thin film epitaxy and demonstrate that the nanoscale control of ALD can be extended to materials suitable for cryogenic quantum technologies.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T02:38:50Z</published>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Yi-Hsun Chen</name>
+    </author>
+    <author>
+      <name>Yin-Chun Huang</name>
+    </author>
+    <author>
+      <name>Zachary Degnan</name>
+    </author>
+    <author>
+      <name>David Sommers</name>
+    </author>
+    <author>
+      <name>Kaijian Xing</name>
+    </author>
+    <author>
+      <name>Manjith Bose</name>
+    </author>
+    <author>
+      <name>Eduardo Solano</name>
+    </author>
+    <author>
+      <name>David Cortie</name>
+    </author>
+    <author>
+      <name>Michael Fuhrer</name>
+    </author>
+    <author>
+      <name>Julian A. Steele</name>
+    </author>
+    <author>
+      <name>Peter Jacobson</name>
+    </author>
+    <author>
+      <name>Miin-Jang Chen</name>
+    </author>
+    <author>
+      <name>Arkady Fedorov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00963v1</id>
+    <title>Topological robustness of thermally disordered lattices: From average structures to ensemble electronic properties</title>
+    <updated>2026-10-01T02:51:34Z</updated>
+    <link href="https://arxiv.org/abs/2610.00963v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.00963v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Band topology is usually assigned to a single crystal structure, yet at finite temperature a crystal is an ensemble of thermally disordered configurations with a fluctuating band gap. We ask whether the thermally averaged structure is a faithful proxy for this ensemble, taking Bi$_2$Se$_3$ as a representative topological insulator and classifying band ordering in each ab initio molecular dynamics snapshot by scaling the spin-orbit coupling. The averaged structure fails in two ways: it misses the Rashba-like spin splitting that instantaneous symmetry breaking produces in individual configurations, and it substantially underestimates the band-gap renormalization, whereas a small ensemble of harmonic Monte Carlo configurations reproduces both the mean and the spread of the gap. Using a band-inversion survival probability, we find that the band inversion of Bi$_2$Se$_3$ holds in every sampled configuration up to 600 K, above which individual configurations cross into normal band ordering well before the average gap closes. Topological robustness at finite temperature is thus a property of the distribution over configurations rather than of any single structure.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T02:51:34Z</published>
+    <arxiv:comment>23 pages, 7 figures. Data available at https://doi.org/10.5281/zenodo.23067045</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Oleg Rubel</name>
+    </author>
+    <author>
+      <name>Karekin Sadikian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.01089v1</id>
+    <title>Charge and spin dynamics in spintronic THz emitters from Time-Dependent Density Functional Theory</title>
+    <updated>2026-10-01T05:33:45Z</updated>
+    <link href="https://arxiv.org/abs/2610.01089v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.01089v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spintronic terahertz (THz) emitters based on ferromagnet/heavy-metal heterostructures provide efficient broadband sources of THz radiation, yet the microscopic relation between ultrafast spin transport and charge redistribution remains incompletely understood. Here, we employ time-dependent density functional theory to resolve the coupled charge, spin, and magnetization dynamics of Co/Pt and Co/W bilayers in real time and space. Despite qualitatively similar interlayer spin-current dynamics, the two heterostructures exhibit markedly different interlayer charge transfer: Co/Pt shows a relatively small and partially reversed transfer from Pt to Co, whereas Co/W exhibits a larger and persistent transfer from Co to W. We trace these differences to the material-dependent ground-state electronic structure and the spin- and orbital-resolved phase space accessible to photoexcited carriers. Spin-resolved dynamics further reveal coexisting spin-orbit-mediated redistribution and optically induced intersite spin transfer, including a delayed minority-spin transfer from the heavy metal to Co common to both systems. While net electronic spin angular momentum is transferred between the layers, we find no corresponding net transfer of electronic orbital angular momentum. In Co/W, the persistent redistribution of electronic density from interstitial to atom-centered states additionally provides strong evidence for light-induced electronic localization. These results demonstrate that ultrafast spin transport does not uniquely determine charge or angular-momentum redistribution in spintronic THz emitters, which instead depends critically on the material-specific electronic phase space.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T05:33:45Z</published>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Ali Kefayati</name>
+    </author>
+  </entry>
+</feed>

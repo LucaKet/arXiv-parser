@@ -1,0 +1,5 @@
+[project]
+name = "arxiv-parser"
+version = "0.1.0"
+description = "Fetch arXiv submissions for set categories and have an LLM re-rank them by personal interest."
+requires-python = ">=3.11"

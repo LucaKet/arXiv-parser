@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+digests/
+.DS_Store
+
+# Personal, machine-specific files (ship the .example versions instead)
+config.toml
+interests.md
